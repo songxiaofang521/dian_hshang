@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.dian_hshang.dao.FenleiDao">
+     <select id="getData" parameterType="java.util.List" resultType="com.example.dian_hshang.model.po.Fenlei">
+         select * from dian_fenlei
+     </select>
+
+      <select id="getPid" parameterType="java.util.List" resultType="com.example.dian_hshang.model.po.Fenlei">
+          select * from dian_fenlei where pid=#{id}
+      </select>
+
+    <insert id="add" parameterType="com.example.dian_hshang.model.po.Fenlei"  useGeneratedKeys="true" keyProperty="id">
+        insert into dian_fenlei (name,pid,createDate,updateDate,isDel) value (#{name},#{pid},#{createDate},#{updateDate},#{isDel})
+    </insert>
+
+    <update id="update" parameterType="com.example.dian_hshang.model.po.Fenlei">
+        update dian_fenlei set name=#{name},pid=#{pid},updateDate=#{updateDate},isDel=#{isDel} where id=#{id}
+    </update>
+
+    <select id="getId" resultType="com.example.dian_hshang.model.po.Fenlei">
+        select * from dian_fenlei where id=#{id}
+    </select>
+</mapper>

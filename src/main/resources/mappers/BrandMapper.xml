@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.dian_hshang.dao.BrandDao">
+         <select id="queryDate" parameterType="com.example.dian_hshang.model.vo.StudentBy" resultType="java.lang.Integer">
+             select count(*) from dian_brand
+         </select>
+          <select id="queryList" parameterType="com.example.dian_hshang.model.vo.StudentBy" resultType="com.example.dian_hshang.model.po.Brand">
+              select * from dian_brand limit ${pageSize*(currpage-1)},#{pageSize}
+          </select>
+           <insert id="addBrand" parameterType="com.example.dian_hshang.model.po.Brand">
+              insert into dian_brand (name,bande,imgpath,bandDesc,ord,isdel,createDate,updateDate,author) value (#{name},#{bande},#{imgpath},#{bandDesc},#{ord},#{isdel},#{createDate},#{updateDate},#{author})
+           </insert>
+           <update id="updateBrand" parameterType="com.example.dian_hshang.model.po.Brand">
+               update dian_brand set name=#{name},bande=#{bande},imgpath=#{imgpath},bandDesc=#{bandDesc},ord=#{ord},isdel=#{isdel},updateDate=#{updateDate},author=#{author} where id=#{id}
+           </update>
+           <select id="getid" resultType="com.example.dian_hshang.model.po.Brand">
+               select * from dian_brand where id=#{id}
+           </select>
+</mapper>
