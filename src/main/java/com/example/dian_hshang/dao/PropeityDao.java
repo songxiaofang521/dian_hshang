@@ -9,4 +9,6 @@ public interface PropeityDao {
     Integer queryDate(StudentBy studentBy);
 
     List<Propeity> queryListBy(StudentBy studentBy);
+
+    void addpropeity(Propeity propeity);
 }

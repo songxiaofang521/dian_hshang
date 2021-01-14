@@ -10,5 +10,9 @@
        <select id="queryListBy" parameterType="com.example.dian_hshang.model.vo.StudentBy" resultType="com.example.dian_hshang.model.po.Propeity">
            select * from dian_propeity limit ${pageSize*(currpage-1)},#{pageSize}
        </select>
+       <insert id="addpropeity" parameterType="com.example.dian_hshang.model.po.Propeity">
+           insert into dian_propeity (name,nameCH,typeId,type,isSKU,isDel,createDate,updateDate,author) value (#{name},#{nameCH},#{typeId},#{type},#{isSKU},#{isDel},#{createDate},#{updateDate},#{author})
+       </insert>
+
 
 </mapper>
