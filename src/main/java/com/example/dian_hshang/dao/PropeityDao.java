@@ -11,4 +11,6 @@ public interface PropeityDao {
     List<Propeity> queryListBy(StudentBy studentBy);
 
     void addpropeity(Propeity propeity);
+
+    void updatepropeity(Propeity propeity);
 }

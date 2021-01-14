@@ -43,4 +43,18 @@ public class PropeityServicelmpl implements PropeityService {
         map.put("message","新增成功");
         return map;
     }
+
+    @Override
+    public Map updatepropeity(Propeity propeity) {
+        Map map=new HashMap();
+        if (propeity==null){
+            map.put("code",400);
+            map.put("message","传值为空");
+        }
+        propeity.setUpdateDate(new Date());
+        propeityDao.updatepropeity(propeity);
+        map.put("code",200);
+        map.put("message","修改成功");
+        return map;
+    }
 }

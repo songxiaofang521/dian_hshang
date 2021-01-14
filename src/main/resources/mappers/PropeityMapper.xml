@@ -13,6 +13,8 @@
        <insert id="addpropeity" parameterType="com.example.dian_hshang.model.po.Propeity">
            insert into dian_propeity (name,nameCH,typeId,type,isSKU,isDel,createDate,updateDate,author) value (#{name},#{nameCH},#{typeId},#{type},#{isSKU},#{isDel},#{createDate},#{updateDate},#{author})
        </insert>
-
+       <update id="updatepropeity" parameterType="com.example.dian_hshang.model.po.Propeity">
+           update dian_propeity set name=#{name},nameCH=#{nameCH},typeId=#{typeId},type=#{type},isSKU=#{isSKU},isDel=#{isDel},updateDate=#{updateDate},author=#{author} where id=#{id}
+       </update>
 
 </mapper>

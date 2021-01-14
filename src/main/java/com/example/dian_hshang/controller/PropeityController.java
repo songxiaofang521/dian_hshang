@@ -58,4 +58,14 @@ public class PropeityController {
        return map;
    }
 
+   /* 请求方式 post
+   * 路径 http://192.168.1.11:8082/api/propeity/updatepropeity
+   * 必传 id
+   * */
+   @PostMapping("updatepropeity")
+   public Map updatepropeity(Propeity propeity){
+       Map map = propeityService.updatepropeity(propeity);
+       return map;
+   }
+
 }

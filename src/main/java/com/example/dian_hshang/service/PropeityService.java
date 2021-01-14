@@ -9,4 +9,6 @@ public interface PropeityService {
     Map getPropeity(StudentBy studentBy);
 
     Map addpropeity(Propeity propeity);
+
+    Map updatepropeity(Propeity propeity);
 }
