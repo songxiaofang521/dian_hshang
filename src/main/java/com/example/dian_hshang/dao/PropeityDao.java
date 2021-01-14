@@ -13,4 +13,8 @@ public interface PropeityDao {
     void addpropeity(Propeity propeity);
 
     void updatepropeity(Propeity propeity);
+
+    Propeity getid(Integer id);
+
+    void updatepropeityByIS(Propeity propeity);
 }

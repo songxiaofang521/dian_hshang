@@ -61,10 +61,22 @@ public class PropeityController {
    /* 请求方式 post
    * 路径 http://192.168.1.11:8082/api/propeity/updatepropeity
    * 必传 id
+   * 属性的修改
    * */
    @PostMapping("updatepropeity")
    public Map updatepropeity(Propeity propeity){
        Map map = propeityService.updatepropeity(propeity);
+       return map;
+   }
+
+   /*请求方式 post
+   * 路径 http://192.168.1.11:8082/api/propeity/deletepropeity
+   * 必传属性 id
+   * */
+
+   @PostMapping("deletepropeity")
+   public Map deletepropeity(Integer id){
+       Map map = propeityService.deletepropeity(id);
        return map;
    }
 

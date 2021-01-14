@@ -16,5 +16,11 @@
        <update id="updatepropeity" parameterType="com.example.dian_hshang.model.po.Propeity">
            update dian_propeity set name=#{name},nameCH=#{nameCH},typeId=#{typeId},type=#{type},isSKU=#{isSKU},isDel=#{isDel},updateDate=#{updateDate},author=#{author} where id=#{id}
        </update>
+       <select id="getid" resultType="com.example.dian_hshang.model.po.Propeity">
+           select * from dian_propeity where id=#{id}
+       </select>
+       <update id="updatepropeityByIS" parameterType="com.example.dian_hshang.model.po.Propeity">
+           update dian_propeity set isDel=#{isDel},updateDate=#{updateDate} where id=#{id}
+       </update>
 
 </mapper>

@@ -11,4 +11,6 @@ public interface PropeityService {
     Map addpropeity(Propeity propeity);
 
     Map updatepropeity(Propeity propeity);
+
+    Map deletepropeity(Integer id);
 }
