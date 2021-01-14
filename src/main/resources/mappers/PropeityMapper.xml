@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.dian_hshang.dao.PropeityDao">
+       <select id="queryDate" parameterType="java.lang.Integer" resultType="com.example.dian_hshang.model.po.Propeity">
+           select count(*) from dian_propeity
+       </select>
+       <select id="queryListBy" parameterType="com.example.dian_hshang.model.vo.StudentBy" resultType="com.example.dian_hshang.model.po.Propeity">
+           select * from dian_propeity limit ${pageSize*(currpage-1)},#{pageSize}
+       </select>
+
+</mapper>
