@@ -42,4 +42,13 @@ public class PropeityvalueServicelmpl implements PropeityvalueService {
         map.put("message","修改成功");
         return map;
     }
+
+    @Override
+    public Map deletePropeityvalue(Integer id) {
+        Map map=new HashMap();
+        propeityvalueDao.deletePropeityvalue(id);
+        map.put("code",200);
+        map.put("message","删除成功");
+        return map;
+    }
 }

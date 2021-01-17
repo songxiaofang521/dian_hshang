@@ -16,4 +16,7 @@
         update dian_propeityvalue set name=#{name},nameCh=#{nameCh},attid=#{attid} where id=#{id}
     </update>
 
+    <delete id="deletePropeityvalue" parameterType="com.example.dian_hshang.model.po.Propeityvalue">
+        delete from dian_propeityvalue where id=#{id}
+    </delete>
 </mapper>

@@ -10,4 +10,6 @@ public interface PropeityvalueService {
     Map addPropeityvalue(Propeityvalue propeityvalue);
 
     Map updatePropeityvalue(Propeityvalue propeityvalue);
+
+    Map deletePropeityvalue(Integer id);
 }

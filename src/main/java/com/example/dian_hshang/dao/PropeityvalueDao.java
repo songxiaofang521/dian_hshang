@@ -10,4 +10,6 @@ public interface PropeityvalueDao {
     void addPropeityvalue(Propeityvalue propeityvalue);
 
     void updatePropeityvalue(Propeityvalue propeityvalue);
+
+    void deletePropeityvalue(Integer id);
 }

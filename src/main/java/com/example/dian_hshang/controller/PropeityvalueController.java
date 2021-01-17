@@ -34,4 +34,9 @@ public class PropeityvalueController {
          Map map=propeityvalueService.updatePropeityvalue(propeityvalue);
          return map;
      }
+
+     public Map deletePropeityvalue(Integer id){
+         Map map=propeityvalueService.deletePropeityvalue(id);
+         return map;
+     }
 }
