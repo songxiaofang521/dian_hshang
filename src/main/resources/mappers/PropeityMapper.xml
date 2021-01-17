@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.example.dian_hshang.dao.PropeityDao">
-       <select id="queryDate" parameterType="java.lang.Integer" resultType="com.example.dian_hshang.model.po.Propeity">
+       <select id="queryDate" parameterType="com.example.dian_hshang.model.vo.StudentBy" resultType="java.lang.Integer">
            select count(*) from dian_propeity
        </select>
        <select id="queryListBy" parameterType="com.example.dian_hshang.model.vo.StudentBy" resultType="com.example.dian_hshang.model.po.Propeity">
