@@ -42,7 +42,7 @@ public class PropeityvalueController {
          Map map=propeityvalueService.updatePropeityvalue(propeityvalue);
          return map;
      }
-
+     @PostMapping("deletePropeityvalue")
      public Map deletePropeityvalue(Integer id){
          Map map=propeityvalueService.deletePropeityvalue(id);
          return map;
