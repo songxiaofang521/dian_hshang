@@ -24,4 +24,13 @@ public class PropeityvalueServicelmpl implements PropeityvalueService {
         map.put("list",list);
         return map;
     }
+
+    @Override
+    public Map addPropeityvalue(Propeityvalue propeityvalue) {
+        Map map=new HashMap();
+        propeityvalueDao.addPropeityvalue(propeityvalue);
+        map.put("code",200);
+        map.put("message","新增成功");
+        return map;
+    }
 }

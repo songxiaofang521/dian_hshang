@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface PropeityvalueDao {
     List<Propeityvalue> queryPropeityvalue(Integer id);
+
+    void addPropeityvalue(Propeityvalue propeityvalue);
 }

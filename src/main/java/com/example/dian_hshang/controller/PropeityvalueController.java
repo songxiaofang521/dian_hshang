@@ -1,5 +1,6 @@
 package com.example.dian_hshang.controller;
 
+import com.example.dian_hshang.model.po.Propeityvalue;
 import com.example.dian_hshang.service.PropeityvalueService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,4 +24,9 @@ public class PropeityvalueController {
        return map;
     }
 
+    @PostMapping("addPropeityvalue")
+     public Map addPropeityvalue(Propeityvalue propeityvalue){
+        Map map=propeityvalueService.addPropeityvalue(propeityvalue);
+        return map;
+     }
 }

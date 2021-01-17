@@ -8,4 +8,8 @@
          select * from dian_propeityvalue
      </select>
 
+    <insert id="addPropeityvalue" parameterType="com.example.dian_hshang.model.po.Propeityvalue">
+        insert into dian_propeityvalue (name,nameCh,attid) value (#{name},#{nameCh},#{attid})
+    </insert>
+
 </mapper>
