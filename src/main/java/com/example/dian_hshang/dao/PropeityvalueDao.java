@@ -1,0 +1,9 @@
+package com.example.dian_hshang.dao;
+
+import com.example.dian_hshang.model.po.Propeityvalue;
+
+import java.util.List;
+
+public interface PropeityvalueDao {
+    List<Propeityvalue> queryPropeityvalue(Integer id);
+}

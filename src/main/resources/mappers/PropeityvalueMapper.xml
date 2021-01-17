@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.dian_hshang.dao.PropeityvalueDao">
+     <select id="queryPropeityvalue" parameterType="java.util.List" resultType="com.example.dian_hshang.model.po.Propeityvalue">
+         select * from dian_propeityvalue
+     </select>
+
+</mapper>
