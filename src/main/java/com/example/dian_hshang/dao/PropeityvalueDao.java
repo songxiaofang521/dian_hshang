@@ -12,4 +12,6 @@ public interface PropeityvalueDao {
     void updatePropeityvalue(Propeityvalue propeityvalue);
 
     void deletePropeityvalue(Integer id);
+
+    Propeityvalue queryById(Integer id);
 }

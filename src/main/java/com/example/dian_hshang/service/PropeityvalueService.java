@@ -12,4 +12,6 @@ public interface PropeityvalueService {
     Map updatePropeityvalue(Propeityvalue propeityvalue);
 
     Map deletePropeityvalue(Integer id);
+
+    Map queryById(Integer id);
 }

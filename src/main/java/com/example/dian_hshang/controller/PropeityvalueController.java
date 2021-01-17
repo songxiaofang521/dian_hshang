@@ -18,6 +18,14 @@ public class PropeityvalueController {
     @Resource
     public PropeityvalueService propeityvalueService;
 
+    @PostMapping("queryById")
+    public Map queryById(Integer id){
+        Map map=propeityvalueService.queryById(id);
+        return map;
+    }
+
+
+
     @PostMapping("list")
     public Map queryPropeityvalue(Integer id){
         Map map= propeityvalueService.queryPropeityvalue(id);
