@@ -8,4 +8,6 @@ public interface PropeityvalueService {
     Map queryPropeityvalue(Integer id);
 
     Map addPropeityvalue(Propeityvalue propeityvalue);
+
+    Map updatePropeityvalue(Propeityvalue propeityvalue);
 }

@@ -8,4 +8,6 @@ public interface PropeityvalueDao {
     List<Propeityvalue> queryPropeityvalue(Integer id);
 
     void addPropeityvalue(Propeityvalue propeityvalue);
+
+    void updatePropeityvalue(Propeityvalue propeityvalue);
 }

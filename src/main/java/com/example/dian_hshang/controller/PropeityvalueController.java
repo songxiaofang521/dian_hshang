@@ -29,4 +29,9 @@ public class PropeityvalueController {
         Map map=propeityvalueService.addPropeityvalue(propeityvalue);
         return map;
      }
+     @PostMapping("updatePropeityvalue")
+     public Map updatePropeityvalue(Propeityvalue propeityvalue){
+         Map map=propeityvalueService.updatePropeityvalue(propeityvalue);
+         return map;
+     }
 }
