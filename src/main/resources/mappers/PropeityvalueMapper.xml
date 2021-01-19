@@ -5,7 +5,7 @@
 
 <mapper namespace="com.example.dian_hshang.dao.PropeityvalueDao">
      <select id="queryPropeityvalue" parameterType="java.util.List" resultType="com.example.dian_hshang.model.po.Propeityvalue">
-         select * from dian_propeityvalue
+         select * from dian_propeityvalue where attid=#{attid}
      </select>
 
     <insert id="addPropeityvalue" parameterType="com.example.dian_hshang.model.po.Propeityvalue">

@@ -21,7 +21,7 @@ public class FenleiController {
     @Resource
     public FenleiService fenleiService;
 
-
+    @PostMapping("uploadFile")
     public ReponseData uploadFile(MultipartFile file) throws IOException {
         //处理新名称
         String originalFilename = file.getOriginalFilename();

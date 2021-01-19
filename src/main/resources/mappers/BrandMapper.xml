@@ -19,4 +19,7 @@
            <select id="getid" resultType="com.example.dian_hshang.model.po.Brand">
                select * from dian_brand where id=#{id}
            </select>
+           <select id="queryBrand" parameterType="java.util.List" resultType="com.example.dian_hshang.model.po.Brand">
+               select * from dian_brand
+           </select>
 </mapper>

@@ -75,4 +75,14 @@ public class BrandServicelmpl implements BrandService {
         map.put("data",brand);
         return map;
     }
+
+    @Override
+    public Map queryBrand() {
+        Map map=new HashMap();
+        List<Brand> list=brandDao.queryBrand();
+        map.put("code",200);
+        map.put("message","成功");
+        map.put("data",list);
+        return map;
+    }
 }

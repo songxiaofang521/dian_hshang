@@ -15,4 +15,7 @@ public interface BrandService {
     Map deleteBrand(Integer id);
 
     Map queryById(Integer id);
+
+    Map queryBrand();
+
 }

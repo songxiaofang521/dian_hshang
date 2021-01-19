@@ -21,6 +21,15 @@ public class BrandController {
     @Resource
     public BrandService brandService;
 
+
+    @PostMapping("queryBrand")
+    public Map queryBrand(){
+        Map map=brandService.queryBrand();
+        return map;
+    }
+
+
+
     //图片
     @PostMapping("tupian")
     public Map<String,Object> tupian(MultipartFile file , HttpServletRequest request) {
