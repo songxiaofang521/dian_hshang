@@ -29,6 +29,12 @@ public class GoodsController {
     }
 
 
+    @PostMapping("updateGoods")
+     public Map updateGoods(Goods goods){
+        Map map=goodsService.updateGoods(goods);
+        return map;
+     }
+
 
 
 }

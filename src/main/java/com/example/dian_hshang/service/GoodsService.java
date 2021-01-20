@@ -6,4 +6,6 @@ import java.util.Map;
 
 public interface GoodsService {
     Map addGoods(Goods goods);
+
+    Map updateGoods(Goods goods);
 }

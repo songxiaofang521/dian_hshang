@@ -30,4 +30,18 @@ public class GoodsServicelmpl implements GoodsService {
         map.put("message","新增成功");
         return map;
     }
+
+    @Override
+    public Map updateGoods(Goods goods) {
+        Map map=new HashMap();
+        if (goods==null){
+            map.put("code",400);
+            map.put("message","传值为空");
+        }
+        goods.setUpdateDate(new Date());
+        goodsDao.updateGoods(goods);
+        map.put("code",200);
+        map.put("message","修改成功");
+        return map;
+    }
 }
