@@ -22,5 +22,8 @@
        <update id="updatepropeityByIS" parameterType="com.example.dian_hshang.model.po.Propeity">
            update dian_propeity set isDel=#{isDel},updateDate=#{updateDate} where id=#{id}
        </update>
+       <select id="queryTypeId" parameterType="java.lang.Integer" resultType="com.example.dian_hshang.model.po.Propeity">
+        select * from dian_propeity where typeId=#{typeId}
+       </select>
 
 </mapper>

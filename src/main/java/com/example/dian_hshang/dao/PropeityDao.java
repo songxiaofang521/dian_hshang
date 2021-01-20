@@ -17,4 +17,6 @@ public interface PropeityDao {
     Propeity getid(Integer id);
 
     void updatepropeityByIS(Propeity propeity);
+
+    List<Propeity> queryTypeId(Integer typeId);
 }

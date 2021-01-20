@@ -77,4 +77,14 @@ public class PropeityServicelmpl implements PropeityService {
         map.put("message","删除成功");
         return map;
     }
+
+    @Override
+    public Map queryTypeId(Integer typeId) {
+        Map map=new HashMap();
+        List<Propeity> list = propeityDao.queryTypeId(typeId);
+        map.put("code",200);
+        map.put("message","成功");
+        map.put("data",list);
+        return map;
+    }
 }

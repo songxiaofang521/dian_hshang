@@ -21,6 +21,15 @@ public class PropeityController {
     @Resource
      public PropeityService propeityService;
 
+
+    @PostMapping("queryTypeId")
+    public Map queryTypeId(Integer typeId){
+        Map map=propeityService.queryTypeId(typeId);
+        return map;
+    }
+
+
+
     /*请求方式 post
     * 路径 http://192.168.1.11:8082/api/propeity/list?pageSize=3
     * 必传参数 pageSize 条数 currpage 页数
