@@ -3,7 +3,13 @@
         "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.example.dian_hshang.dao.GoodsDao">
+<mapper namespace="com.example.dian_hshang.dao.GoodsvalueDao">
 
 
+           <insert id="adds" parameterType="java.util.List">
+            insert into dian_goodsvalue (proId,attrData,storcks,price) value
+            <foreach collection="list" item="item" index="index" separator=",">
+                (#{item.proId},#{item.attrData},#{item.storcks},#{item.price})
+            </foreach>
+           </insert>
 </mapper>
