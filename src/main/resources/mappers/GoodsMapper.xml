@@ -8,8 +8,16 @@
     <insert id="addGoods" parameterType="com.example.dian_hshang.model.po.Goods">
         insert into dian_goods (name,title,bandId,typeId,productdecs,price,imgPath,stocks,sortNum,createDate,updateDate,author,isDel) value (#{name},#{title},#{bandId},#{typeId},#{productdecs},#{price},#{imgPath},#{stocks},#{sortNum},#{createDate},#{updateDate},#{author},#{isDel})
    </insert>
-    <update id="updateGoods">
+    <update id="updateGoods" parameterType="com.example.dian_hshang.model.po.Goods">
         update dian_goods set name=#{name},title=#{title},bandId=#{bandId},typeId=#{typeId},productdecs=#{productdecs},price=#{price},imgPath=#{imgPath},stocks=#{stocks},sortNum=#{sortNum},updateDate=#{updateDate},author=#{author},isDel=#{isDel} where id=#{id}
     </update>
+
+    <select id="queryDate" parameterType="com.example.dian_hshang.model.vo.StudentBy" resultType="com.example.dian_hshang.model.po.Goods">
+       select count(*) from dian_goods
+    </select>
+
+    <select id="queryList" parameterType="com.example.dian_hshang.model.vo.StudentBy" resultType="com.example.dian_hshang.model.po.Goods">
+        select * from dian_goods limit ${pageSize*(currpage-1)},#{pageSize}
+    </select>
 
 </mapper>

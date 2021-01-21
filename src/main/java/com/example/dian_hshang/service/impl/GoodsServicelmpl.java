@@ -2,12 +2,15 @@ package com.example.dian_hshang.service.impl;
 
 import com.example.dian_hshang.dao.GoodsDao;
 import com.example.dian_hshang.model.po.Goods;
+import com.example.dian_hshang.model.vo.StudentBy;
 import com.example.dian_hshang.service.GoodsService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import javax.jnlp.IntegrationService;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -43,5 +46,15 @@ public class GoodsServicelmpl implements GoodsService {
         map.put("code",200);
         map.put("message","修改成功");
         return map;
+    }
+
+    @Override
+    public Map queryGood(StudentBy studentBy) {
+        Map rs=new HashMap();
+         Integer count = goodsDao.queryDate(studentBy);
+         rs.put("count",count);
+        List <Goods> list= goodsDao.queryList(studentBy);
+        rs.put("list",list);
+        return rs;
     }
 }

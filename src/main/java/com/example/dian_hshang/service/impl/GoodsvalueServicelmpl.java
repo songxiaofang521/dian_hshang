@@ -51,7 +51,7 @@ public class GoodsvalueServicelmpl implements GoodsvalueService {
             //构建属性数据对象
             Goodsvalue goodsvalue=new Goodsvalue();
              //设置对应的商品id
-            goodsvalue.setId(goods.getId());
+            goodsvalue.setProId(goods.getId());
             goodsvalue.setPrice(o.getInteger("price"));
             goodsvalue.setStorcks(o.getInteger("storcks"));
             o.remove("price");
