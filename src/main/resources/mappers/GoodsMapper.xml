@@ -12,12 +12,16 @@
         update dian_goods set name=#{name},title=#{title},bandId=#{bandId},typeId=#{typeId},productdecs=#{productdecs},price=#{price},imgPath=#{imgPath},stocks=#{stocks},sortNum=#{sortNum},updateDate=#{updateDate},author=#{author},isDel=#{isDel} where id=#{id}
     </update>
 
-    <select id="queryDate" parameterType="com.example.dian_hshang.model.vo.StudentBy" resultType="com.example.dian_hshang.model.po.Goods">
+    <select id="queryDate" parameterType="com.example.dian_hshang.model.vo.StudentBy" resultType="java.lang.Integer">
        select count(*) from dian_goods
     </select>
 
     <select id="queryList" parameterType="com.example.dian_hshang.model.vo.StudentBy" resultType="com.example.dian_hshang.model.po.Goods">
         select * from dian_goods limit ${pageSize*(currpage-1)},#{pageSize}
+    </select>
+
+    <select id="queryById" parameterType="java.lang.Integer" resultType="com.example.dian_hshang.model.po.Goods">
+        select * from dian_goods where id=#{id}
     </select>
 
 </mapper>

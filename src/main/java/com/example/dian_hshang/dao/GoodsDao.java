@@ -13,4 +13,6 @@ public interface GoodsDao {
     Integer queryDate(StudentBy studentBy);
 
     List<Goods> queryList(StudentBy studentBy);
+
+    Goods queryById(Integer id);
 }

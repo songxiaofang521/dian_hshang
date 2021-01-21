@@ -11,4 +11,6 @@ public interface GoodsService {
     Map updateGoods(Goods goods);
 
     Map queryGood(StudentBy studentBy);
+
+    Map delete(Integer id);
 }

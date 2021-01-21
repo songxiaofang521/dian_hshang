@@ -3,10 +3,7 @@ package com.example.dian_hshang.controller;
 import com.example.dian_hshang.model.po.Goods;
 import com.example.dian_hshang.model.vo.StudentBy;
 import com.example.dian_hshang.service.GoodsService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
@@ -19,6 +16,13 @@ public class GoodsController {
 
     @Resource
     public GoodsService goodsService;
+
+
+       @DeleteMapping("delete")
+       public Map delete(Integer id){
+           Map map=goodsService.delete(id);
+           return map;
+       }
 
 
         /*查询

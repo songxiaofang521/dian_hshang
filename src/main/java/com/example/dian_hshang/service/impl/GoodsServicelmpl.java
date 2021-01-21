@@ -57,4 +57,19 @@ public class GoodsServicelmpl implements GoodsService {
         rs.put("list",list);
         return rs;
     }
+
+    @Override
+    public Map delete(Integer id) {
+        Map map=new HashMap();
+        Goods goods= goodsDao.queryById(id);
+        if(goods!=null){
+            goods.setUpdateDate(new Date());
+            goods.setIsDel(1);
+            map.put("code",200);
+            map.put("message","删除成功");
+        }
+        map.put("code",400);
+        map.put("message","删除失败");
+        return map;
+    }
 }
