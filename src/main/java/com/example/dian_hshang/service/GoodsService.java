@@ -13,4 +13,6 @@ public interface GoodsService {
     Map queryGood(StudentBy studentBy);
 
     Map delete(Integer id);
+
+    Map huixian(Integer id);
 }

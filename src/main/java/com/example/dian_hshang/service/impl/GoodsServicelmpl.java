@@ -72,4 +72,14 @@ public class GoodsServicelmpl implements GoodsService {
         map.put("message","删除失败");
         return map;
     }
+
+    @Override
+    public Map huixian(Integer id) {
+        Map map=new HashMap();
+        Goods goods= goodsDao.queryById(id);
+        map.put("code",200);
+        map.put("message","回显成功");
+        map.put("data",goods);
+        return map;
+    }
 }

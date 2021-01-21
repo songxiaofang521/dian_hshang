@@ -17,7 +17,14 @@ public class GoodsController {
     @Resource
     public GoodsService goodsService;
 
+    /*商品回显*/
+    @PostMapping("huixian")
+    public Map huixian(Integer id){
+        Map map=goodsService.huixian(id);
+        return map;
+    }
 
+     /*商品删除*/
        @DeleteMapping("delete")
        public Map delete(Integer id){
            Map map=goodsService.delete(id);
