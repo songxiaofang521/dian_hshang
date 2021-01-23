@@ -9,4 +9,6 @@ public interface GoodsvalueDao {
     void add(Goods goods);
 
     void adds(List<Goodsvalue> list);
+
+    List<Goodsvalue> queryGoodsPid(Integer pid);
 }

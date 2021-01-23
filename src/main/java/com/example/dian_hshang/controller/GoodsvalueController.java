@@ -16,6 +16,13 @@ public class GoodsvalueController {
     @Resource
     public GoodsvalueService goodsvalueService;
 
+
+    @GetMapping("queryGoodsPid")
+    public Map queryGoodsPid(Integer pid){
+        Map map=goodsvalueService.queryGoodsPid(pid);
+        return map;
+    }
+
     @PostMapping("addString")
      public Map addString(Goods goods,String attr,String sku){
       Map map=goodsvalueService.addString(goods,attr,sku);

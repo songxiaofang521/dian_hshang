@@ -1,5 +1,6 @@
 package com.example.dian_hshang.model.po;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
@@ -16,9 +17,11 @@ public class Goods {
     private String imgPath;
     private Integer stocks;
     private Integer sortNum;
-    @DateTimeFormat(pattern = "yyyy-MM-dd MM:mm:ss")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
-    @DateTimeFormat(pattern = "yyyy-MM-dd MM:mm:ss")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date updateDate;
     private String author;
     private int isDel;

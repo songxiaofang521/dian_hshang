@@ -7,4 +7,6 @@ import java.util.Map;
 public interface GoodsvalueService {
 
     Map addString(Goods goods, String attr, String sku);
+
+    Map queryGoodsPid(Integer pid);
 }

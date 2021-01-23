@@ -12,4 +12,9 @@
                 (#{item.proId},#{item.attrData},#{item.storcks},#{item.price})
             </foreach>
            </insert>
+
+            <select id="queryGoodsPid" parameterType="java.lang.Integer" resultType="com.example.dian_hshang.model.po.Goodsvalue">
+                select * from dian_goodsvalue where proId=#{pid}
+            </select>
+
 </mapper>

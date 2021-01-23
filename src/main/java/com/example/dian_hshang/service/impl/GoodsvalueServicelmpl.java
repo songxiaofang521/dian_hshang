@@ -66,4 +66,12 @@ public class GoodsvalueServicelmpl implements GoodsvalueService {
         map.put("message","成功");
        return map;
     }
+
+    @Override
+    public Map queryGoodsPid(Integer pid) {
+        Map map=new HashMap();
+        List<Goodsvalue>list=goodsvalueDao.queryGoodsPid(pid);
+        map.put("list",list);
+        return map;
+    }
 }
