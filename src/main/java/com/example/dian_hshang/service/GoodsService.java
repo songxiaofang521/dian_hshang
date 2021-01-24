@@ -15,4 +15,5 @@ public interface GoodsService {
     Map delete(Integer id);
 
     Map huixian(Integer id);
+
 }

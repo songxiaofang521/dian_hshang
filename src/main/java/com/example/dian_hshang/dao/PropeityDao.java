@@ -1,5 +1,6 @@
 package com.example.dian_hshang.dao;
 
+import com.example.dian_hshang.model.po.Goods;
 import com.example.dian_hshang.model.po.Propeity;
 import com.example.dian_hshang.model.vo.StudentBy;
 
@@ -19,4 +20,6 @@ public interface PropeityDao {
     void updatepropeityByIS(Propeity propeity);
 
     List<Propeity> queryTypeId(Integer typeId);
+
+
 }

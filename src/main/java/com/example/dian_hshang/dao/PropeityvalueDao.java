@@ -14,4 +14,6 @@ public interface PropeityvalueDao {
     void deletePropeityvalue(Integer id);
 
     Propeityvalue queryById(Integer id);
+
+    List<Propeityvalue> queryDateByTypeId(Integer typeId);
 }

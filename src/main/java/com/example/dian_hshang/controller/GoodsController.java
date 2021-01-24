@@ -17,6 +17,10 @@ public class GoodsController {
     @Resource
     public GoodsService goodsService;
 
+
+
+
+
     /*商品回显*/
     @PostMapping("huixian")
     public Map huixian(Integer id){

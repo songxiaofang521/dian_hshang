@@ -23,4 +23,6 @@
     <select id="queryById" resultType="com.example.dian_hshang.model.po.Propeityvalue">
         select * from dian_propeityvalue where id=#{id}
     </select>
+
+
 </mapper>

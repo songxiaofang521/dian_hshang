@@ -3,6 +3,7 @@ package com.example.dian_hshang.model.po;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
+import java.util.List;
 
 public class Propeity {
 
@@ -18,6 +19,16 @@ public class Propeity {
     @DateTimeFormat(pattern = "yyyy-MM-dd MM:mm:ss")
     private Date updateDate;
     private String author;
+
+    private List values;
+
+    public List getValues() {
+        return values;
+    }
+
+    public void setValues(List values) {
+        this.values = values;
+    }
 
     public Integer getId() {
         return id;

@@ -4,10 +4,7 @@ package com.example.dian_hshang.controller;
 import com.example.dian_hshang.model.po.Propeity;
 import com.example.dian_hshang.model.vo.StudentBy;
 import com.example.dian_hshang.service.PropeityService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
@@ -20,6 +17,12 @@ public class PropeityController {
 
     @Resource
      public PropeityService propeityService;
+
+    @GetMapping("queryAttrDateBy")
+    public Map queryAttrDateBy(Integer typeId){
+        Map map=propeityService.queryAttrDateBy(typeId);
+        return map;
+    }
 
 
     @PostMapping("queryTypeId")

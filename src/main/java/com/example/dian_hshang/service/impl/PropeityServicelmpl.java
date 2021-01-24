@@ -1,22 +1,77 @@
 package com.example.dian_hshang.service.impl;
 
 import com.example.dian_hshang.dao.PropeityDao;
+import com.example.dian_hshang.dao.PropeityvalueDao;
+import com.example.dian_hshang.model.po.Goods;
 import com.example.dian_hshang.model.po.Propeity;
+import com.example.dian_hshang.model.po.Propeityvalue;
 import com.example.dian_hshang.model.vo.StudentBy;
 import com.example.dian_hshang.service.PropeityService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class PropeityServicelmpl implements PropeityService {
 
     @Resource
     public PropeityDao propeityDao;
+
+
+    @Resource
+    public PropeityvalueDao propeityvalueDao;
+
+
+
+    @Override
+    public Map queryAttrDateBy(Integer typeId) {
+        //声明返回数据
+        Map rs=new HashMap();
+        //查询出所有的属性数据
+        List<Propeity> attrs=propeityDao.queryTypeId(typeId);
+        //声明skuDatas
+        List<Propeity>skuDats=new ArrayList<>();
+        //声明attrDatas
+        List<Propeity> attrDatas=new ArrayList<>();
+        //遍历所有的属性数据
+        for (int i = 0; i <attrs.size() ; i++) {
+            //得到具体的一个属性
+            Propeity propeity=attrs.get(i);
+            //判断此属性是否为sku
+            if(propeity.getIsSKU()==0){
+               //判断此属性的类型 如果是input 没有values
+                if(propeity.getType()!=3){
+                    //查询此属性 对应的选项值
+                    List<Propeityvalue> propeityvalues = propeityvalueDao.queryPropeityvalue(propeity.getId());
+                    propeity.setValues(propeityvalues);
+                }
+                attrDatas.add(propeity);
+            }else{//是sku数据
+                //判断此属性的类型 如果是input 没有values
+                if(propeity.getType()!=3){
+                    //查询此属性 对应的选项值
+                    List<Propeityvalue> propeityvalues = propeityvalueDao.queryPropeityvalue(propeity.getId());
+                    propeity.setValues(propeityvalues);
+                }
+                skuDats.add(propeity);
+            }
+        }
+       //查询sku数据
+        rs.put("skuDats",skuDats);
+        rs.put("attrDatas",attrDatas);
+        return rs;
+    }
+
+
+
+
+
+
+
+
+
+
 
     @Override
     public Map getPropeity(StudentBy studentBy) {

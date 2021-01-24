@@ -8,10 +8,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import javax.jnlp.IntegrationService;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class GoodsServicelmpl implements GoodsService {
@@ -82,4 +79,8 @@ public class GoodsServicelmpl implements GoodsService {
         map.put("data",goods);
         return map;
     }
+
+
+
+
 }

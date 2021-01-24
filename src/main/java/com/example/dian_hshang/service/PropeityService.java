@@ -15,4 +15,6 @@ public interface PropeityService {
     Map deletepropeity(Integer id);
 
     Map queryTypeId(Integer typeId);
+
+    Map queryAttrDateBy(Integer typeId);
 }
