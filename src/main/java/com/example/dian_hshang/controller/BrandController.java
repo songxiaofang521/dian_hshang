@@ -91,7 +91,7 @@ public class BrandController {
         return map;
      }
     /*请求post
-    * 路径：http://192.168.1.11:8082/api/brand/addBrand
+    * 路径：http://192.168.244.1:8082/api/brand/addBrand
     * */
      @PostMapping("addBrand")
     public Map addBrand(Brand brand){
@@ -100,7 +100,7 @@ public class BrandController {
     }
 
     /*请求方式 post
-    *路径 http://192.168.1.11:8082/api/brand/updateBrand
+    *路径 http://192.168.244.1:8082/api/brand/updateBrand
     * */
    @PostMapping("updateBrand")
     public Map updateBrand(Brand brand){
@@ -108,7 +108,7 @@ public class BrandController {
         return map;
     }
     /*请求方式 delete
-    * 路径 http://192.168.1.11:8082/api/brand/deleteBrand
+    * 路径 http://192.168.244.1:8082/api/brand/deleteBrand
     * */
     @DeleteMapping("deleteBrand")
     public Map deleteBrand(Integer id){

@@ -34,7 +34,7 @@ public class PropeityController {
 
 
     /*请求方式 post
-    * 路径 http://192.168.1.11:8082/api/propeity/list?pageSize=3
+    * 路径 http://192.168.244.1:8082/api/propeity/list?pageSize=3
     * 必传参数 pageSize 条数 currpage 页数
     * */
 
@@ -60,7 +60,7 @@ public class PropeityController {
 
    /* 属性新增
    *请求方式 post
-   * 路径 http://192.168.1.11:8082/api/propeity/addpropeity
+   * 路径 http://192.168.244.1:8082/api/propeity/addpropeity
    *
    * */
 
@@ -71,7 +71,7 @@ public class PropeityController {
    }
 
    /* 请求方式 post
-   * 路径 http://192.168.1.11:8082/api/propeity/updatepropeity
+   * 路径 http://192.168.244.1:8082/api/propeity/updatepropeity
    * 必传 id
    * 属性的修改
    * */
@@ -82,7 +82,7 @@ public class PropeityController {
    }
 
    /*请求方式 post
-   * 路径 http://192.168.1.11:8082/api/propeity/deletepropeity
+   * 路径 http://192.168.244.1:8082/api/propeity/deletepropeity
    * 必传属性 id
    * */
 
