@@ -6,4 +6,6 @@ import java.util.Map;
 
 public interface UserService {
     Map addUser(User user);
+
+    Map queryUser(User user);
 }

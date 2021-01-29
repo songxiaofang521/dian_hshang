@@ -18,6 +18,13 @@ public class UserController {
     @Resource
     public UserService userService;
 
+    /*登录*/
+    @PostMapping("queryUser")
+    public Map queryUser(User user){
+        Map map=userService.queryUser(user);
+        return map;
+    }
+
     /*注册用户*/
     @PostMapping("addUser")
     public Map addUser(User user){

@@ -10,6 +10,10 @@
         (#{name},#{realName},#{password},#{sex},#{phone},#{email},#{idCard},#{birthday},#{imgUrl},#{eduId},#{deptId},#{createDate},#{UpdateDate})
     </insert>
 
+    <select id="queryUsername" parameterType="java.lang.String" resultType="com.example.dian_hshang.model.po.User">
+        select * from dian_user where name=#{name}
+    </select>
+
 
 
 </mapper>
