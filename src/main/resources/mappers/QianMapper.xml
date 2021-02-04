@@ -7,6 +7,9 @@
       <select id="queryqian" resultType="com.example.dian_hshang.model.po.Qian">
           select * from dian_qian
       </select>
+       <insert id="addQian" parameterType="com.example.dian_hshang.model.po.Qian">
+           insert into dian_qian (pid.name,url,type,isDel,createDate,updateDate,author) value (#{pid},#{name},#{url},#{type},#{isDel},#{createDate},#{updateDate},#{author})
+       </insert>
 
 
 

@@ -7,4 +7,5 @@ import java.util.List;
 public interface QianDao {
     List<Qian> queryqian();
 
+    void addQian(Qian qian);
 }

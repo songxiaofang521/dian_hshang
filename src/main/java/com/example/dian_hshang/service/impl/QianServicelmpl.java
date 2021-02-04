@@ -7,6 +7,7 @@ import com.example.dian_hshang.service.QianService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,6 +24,17 @@ public class QianServicelmpl implements QianService {
         Map map=new HashMap();
         List<Qian>list=qianDao.queryqian();
         map.put("list",list);
+        return map;
+    }
+
+    @Override
+    public Map addQian(Qian qian) {
+        Map map=new HashMap();
+        qian.setCreateDate(new Date());
+        qian.setPid(qian.getId());
+        qianDao.addQian(qian);
+        map.put("code",200);
+        map.put("message","成功");
         return map;
     }
 }
