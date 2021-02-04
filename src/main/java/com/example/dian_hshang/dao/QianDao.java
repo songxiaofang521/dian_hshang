@@ -10,4 +10,6 @@ public interface QianDao {
     void addQian(Qian qian);
 
     void updateQian(Qian qian);
+
+    Qian queryQianById(Integer id);
 }

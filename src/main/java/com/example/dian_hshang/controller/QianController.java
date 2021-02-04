@@ -49,4 +49,15 @@ public class QianController {
         return map;
     }
 
+    /* 回显
+    *  请求方式 post
+    *  路径：http://192.168.244.1:8082/api/qian/updateQian
+    * */
+
+    @PostMapping("queryQianById")
+    public Map queryQianById(Integer id){
+        Map map=qianService.queryQianById(id);
+        return map;
+    }
+
 }

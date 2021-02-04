@@ -13,7 +13,9 @@
        <update id="updateQian" parameterType="com.example.dian_hshang.model.po.Qian">
            update dian_qian set name=#{name},url=#{url},type=#{type} where id=#{id}
        </update>
-
+       <select id="queryQianById" parameterType="java.lang.Integer" resultType="com.example.dian_hshang.model.po.Qian">
+           select * from dian_qian where id=#{id}
+       </select>
 
 
 

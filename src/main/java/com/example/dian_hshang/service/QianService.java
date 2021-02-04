@@ -10,4 +10,6 @@ public interface QianService {
     Map addQian(Qian qian);
 
     Map updateQian(Qian qian);
+
+    Map queryQianById(Integer id);
 }
