@@ -37,4 +37,13 @@ public class QianServicelmpl implements QianService {
         map.put("message","成功");
         return map;
     }
+
+    @Override
+    public Map updateQian(Qian qian) {
+        Map map=new HashMap();
+        qianDao.updateQian(qian);
+        map.put("code",200);
+        map.put("message","成功");
+        return map;
+    }
 }

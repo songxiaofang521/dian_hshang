@@ -8,4 +8,6 @@ public interface QianDao {
     List<Qian> queryqian();
 
     void addQian(Qian qian);
+
+    void updateQian(Qian qian);
 }

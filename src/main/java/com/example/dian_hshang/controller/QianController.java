@@ -30,11 +30,22 @@ public class QianController {
 
     /*权限表新增
     * 请求方式： post
-    * 路径：
+    * 路径：http://192.168.244.1:8082/api/qian/addQian
     * */
     @PostMapping("addQian")
     public Map addQian(Qian qian){
         Map map=qianService.addQian(qian);
+        return map;
+    }
+
+    /* 修改
+    *   请求方式 post
+    *   路径：http://192.168.244.1:8082/api/qian/updateQian
+    * */
+
+    @PostMapping("updateQian")
+    public Map updateQian(Qian qian){
+        Map map=qianService.updateQian(qian);
         return map;
     }
 

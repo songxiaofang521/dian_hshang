@@ -8,4 +8,6 @@ public interface QianService {
     Map queryqian();
 
     Map addQian(Qian qian);
+
+    Map updateQian(Qian qian);
 }

@@ -11,7 +11,7 @@ public class Qian {
     private String name;
     private String url;
     private Integer type;
-    private Integer isDel;
+    private int isDel;
     @DateTimeFormat(pattern = "yyyy-MM-dd MM:mm:ss")
     private Date createDate;
     @DateTimeFormat(pattern = "yyyy-MM-dd MM:mm:ss")
@@ -58,11 +58,11 @@ public class Qian {
         this.type = type;
     }
 
-    public Integer getIsDel() {
+    public int getIsDel() {
         return isDel;
     }
 
-    public void setIsDel(Integer isDel) {
+    public void setIsDel(int isDel) {
         this.isDel = isDel;
     }
 
