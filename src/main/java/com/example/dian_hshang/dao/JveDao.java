@@ -1,0 +1,10 @@
+package com.example.dian_hshang.dao;
+
+import com.example.dian_hshang.model.po.Jve;
+
+import java.util.List;
+
+public interface JveDao {
+    List<Jve> queryJve();
+
+}
