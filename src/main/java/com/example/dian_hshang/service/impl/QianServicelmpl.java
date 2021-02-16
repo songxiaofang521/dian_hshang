@@ -31,7 +31,7 @@ public class QianServicelmpl implements QianService {
     public Map addQian(Qian qian) {
         Map map=new HashMap();
         qian.setCreateDate(new Date());
-        qian.setPid(qian.getId());
+        qian.setPid(qian.getPid());
         qianDao.addQian(qian);
         map.put("code",200);
         map.put("message","成功");
