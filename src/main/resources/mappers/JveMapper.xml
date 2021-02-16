@@ -13,7 +13,9 @@
           insert into dian_jve (name,isDel,createDate,author) value (#{name},#{isDel},#{createDate},#{author})
       </insert>
 
-
+      <update id="updateJve" parameterType="com.example.dian_hshang.model.po.Jve">
+          update dian_jve set name=#{name},isDel=#{isDel},createDate=#{createDate},author=#{author} where id=#{id}
+      </update>
 
 
 

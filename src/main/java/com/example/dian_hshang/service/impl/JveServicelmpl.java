@@ -35,4 +35,13 @@ public class JveServicelmpl implements JveService {
         map.put("message","成功");
         return map;
     }
+
+    @Override
+    public Map updateJve(Jve jve) {
+        Map map=new HashMap();
+        jveDao.updateJve(jve);
+        map.put("code",200);
+        map.put("message","成功");
+        return map;
+    }
 }

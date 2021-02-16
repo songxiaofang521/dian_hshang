@@ -8,4 +8,6 @@ public interface JveService {
     Map queryJve();
 
     Map addJve(Jve jve);
+
+    Map updateJve(Jve jve);
 }

@@ -27,4 +27,10 @@ public class JveController {
         Map map=jveService.addJve(jve);
         return map;
     }
+
+    @PostMapping("updateJve")
+    public Map updateJve(Jve jve){
+        Map map=jveService.updateJve(jve);
+        return map;
+    }
 }

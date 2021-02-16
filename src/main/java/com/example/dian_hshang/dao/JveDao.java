@@ -8,4 +8,6 @@ public interface JveDao {
     List<Jve> queryJve();
 
     void addJve(Jve jve);
+
+    void updateJve(Jve jve);
 }
