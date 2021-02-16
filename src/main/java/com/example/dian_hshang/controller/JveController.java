@@ -1,11 +1,9 @@
 package com.example.dian_hshang.controller;
 
 
+import com.example.dian_hshang.model.po.Jve;
 import com.example.dian_hshang.service.JveService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.Map;
@@ -21,6 +19,12 @@ public class JveController {
     @GetMapping("queryJve")
     public Map queryJve(){
         Map map=jveService.queryJve();
+        return map;
+    }
+
+    @PostMapping("addJve")
+    public Map addJve(Jve jve){
+        Map map=jveService.addJve(jve);
         return map;
     }
 }

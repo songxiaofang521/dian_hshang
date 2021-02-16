@@ -9,6 +9,12 @@
           select * from dian_jve
       </select>
 
+      <insert id="addJve" parameterType="com.example.dian_hshang.model.po.Jve">
+          insert into dian_jve (name,isDel,createDate,author) value (#{name},#{isDel},#{createDate},#{author})
+      </insert>
+
+
+
 
 
 </mapper>

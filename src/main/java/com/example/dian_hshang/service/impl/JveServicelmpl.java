@@ -6,6 +6,7 @@ import com.example.dian_hshang.service.JveService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,6 +22,17 @@ public class JveServicelmpl implements JveService {
         Map map=new HashMap();
         List<Jve>list=jveDao.queryJve();
         map.put("data",list);
+        return map;
+    }
+
+    @Override
+    public Map addJve(Jve jve) {
+        Map map=new HashMap();
+        jve.setCreateDate(new Date());
+        jve.setIsDel(0);
+        jveDao.addJve(jve);
+        map.put("code",200);
+        map.put("message","成功");
         return map;
     }
 }

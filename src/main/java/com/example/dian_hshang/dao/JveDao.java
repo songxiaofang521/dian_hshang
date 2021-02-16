@@ -7,4 +7,5 @@ import java.util.List;
 public interface JveDao {
     List<Jve> queryJve();
 
+    void addJve(Jve jve);
 }
