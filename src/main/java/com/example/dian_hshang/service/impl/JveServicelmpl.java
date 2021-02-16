@@ -51,6 +51,8 @@ public class JveServicelmpl implements JveService {
         Jve jve1=jveDao.queryById(jve.getId());
         jve1.setIsDel(1);
         jveDao.deleteJve(jve1);
-        return null;
+        map.put("code",200);
+        map.put("message","成功");
+        return map;
     }
 }
