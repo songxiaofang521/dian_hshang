@@ -10,4 +10,7 @@ public interface JveService {
     Map addJve(Jve jve);
 
     Map updateJve(Jve jve);
+
+    Map deleteJve(Jve jve);
+
 }

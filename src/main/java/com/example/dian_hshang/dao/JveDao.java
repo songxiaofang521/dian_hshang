@@ -10,4 +10,8 @@ public interface JveDao {
     void addJve(Jve jve);
 
     void updateJve(Jve jve);
+
+    Jve queryById(Integer id);
+
+    void deleteJve(Jve jve1);
 }

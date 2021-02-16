@@ -33,4 +33,10 @@ public class JveController {
         Map map=jveService.updateJve(jve);
         return map;
     }
+
+    @PostMapping("deleteJve")
+    public Map deleteJve(Jve jve){
+        Map map=jveService.deleteJve(jve);
+        return map;
+    }
 }

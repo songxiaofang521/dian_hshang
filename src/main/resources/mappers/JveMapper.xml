@@ -17,6 +17,14 @@
           update dian_jve set name=#{name},isDel=#{isDel},createDate=#{createDate},author=#{author} where id=#{id}
       </update>
 
+       <select id="queryById" parameterType="java.lang.Integer" resultType="com.example.dian_hshang.model.po.Jve">
+           select * from dian_jve where id=#{id}
+       </select>
+
+        <update id="deleteJve" parameterType="com.example.dian_hshang.model.po.Jve">
+            update dian_jve set isDel=#{isDel} where id=#{id}
+        </update>
+
 
 
 </mapper>

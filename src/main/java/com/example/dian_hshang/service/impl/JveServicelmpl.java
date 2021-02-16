@@ -44,4 +44,13 @@ public class JveServicelmpl implements JveService {
         map.put("message","成功");
         return map;
     }
+
+    @Override
+    public Map deleteJve(Jve jve) {
+        Map map=new HashMap();
+        Jve jve1=jveDao.queryById(jve.getId());
+        jve1.setIsDel(1);
+        jveDao.deleteJve(jve1);
+        return null;
+    }
 }
