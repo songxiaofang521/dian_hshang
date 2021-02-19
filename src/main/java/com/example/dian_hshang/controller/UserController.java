@@ -1,11 +1,9 @@
 package com.example.dian_hshang.controller;
 
 import com.example.dian_hshang.model.po.User;
+import com.example.dian_hshang.model.vo.StudentBy;
 import com.example.dian_hshang.service.UserService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.Map;
@@ -30,6 +28,12 @@ public class UserController {
     public Map addUser(User user){
         Map map=userService.addUser(user);
       return map;
+    }
+
+    @GetMapping("queryUs")
+    public Map queryUs(StudentBy studentBy){
+        Map map=userService.queryUs(studentBy);
+        return map;
     }
 
 }

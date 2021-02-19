@@ -14,6 +14,14 @@
         select * from dian_user where name=#{name}
     </select>
 
+    <select id="queryshu" parameterType="com.example.dian_hshang.model.vo.StudentBy" resultType="java.lang.Integer">
+        select count(*) from dian_user
+    </select>
+
+    <select id="queryList" parameterType="com.example.dian_hshang.model.vo.StudentBy" resultType="com.example.dian_hshang.model.po.User">
+        select * from dian_user limit ${pageSize*(currpage-1)},#{pageSize}
+    </select>
+
 
 
 </mapper>

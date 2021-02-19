@@ -2,12 +2,14 @@ package com.example.dian_hshang.service.impl;
 
 import com.example.dian_hshang.dao.UserDao;
 import com.example.dian_hshang.model.po.User;
+import com.example.dian_hshang.model.vo.StudentBy;
 import com.example.dian_hshang.service.UserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -47,6 +49,16 @@ public class UserServicelmpl implements UserService {
             map.put("code",400);
             map.put("message","用户不存在");
         }
+        return map;
+    }
+
+    @Override
+    public Map queryUs(StudentBy studentBy) {
+        Map map=new HashMap();
+        Integer count=userDao.queryshu(studentBy);
+        map.put("count",count);
+        List<User>list=userDao.queryList(studentBy);
+        map.put("list",list);
         return map;
     }
 }
