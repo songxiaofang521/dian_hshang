@@ -36,4 +36,13 @@ public class UserController {
         return map;
     }
 
+    /*
+    * 查询所有角色信息
+    * */
+
+    @PostMapping("jveshe")
+    public Map queryjveshe(){
+        Map map=userService.queryjveshe();
+        return map;
+    }
 }

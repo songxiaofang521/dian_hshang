@@ -1,6 +1,7 @@
 package com.example.dian_hshang.service.impl;
 
 import com.example.dian_hshang.dao.UserDao;
+import com.example.dian_hshang.model.po.Jve;
 import com.example.dian_hshang.model.po.User;
 import com.example.dian_hshang.model.vo.StudentBy;
 import com.example.dian_hshang.service.UserService;
@@ -59,6 +60,16 @@ public class UserServicelmpl implements UserService {
         map.put("count",count);
         List<User>list=userDao.queryList(studentBy);
         map.put("list",list);
+        return map;
+    }
+
+    @Override
+    public Map queryjveshe() {
+        Map map=new HashMap();
+        List<Jve>list=userDao.queryjveshe();
+        map.put("list",list);
+        map.put("code",200);
+        map.put("message","成功");
         return map;
     }
 }

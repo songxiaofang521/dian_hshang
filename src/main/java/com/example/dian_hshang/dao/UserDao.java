@@ -1,5 +1,6 @@
 package com.example.dian_hshang.dao;
 
+import com.example.dian_hshang.model.po.Jve;
 import com.example.dian_hshang.model.po.User;
 import com.example.dian_hshang.model.vo.StudentBy;
 
@@ -13,5 +14,7 @@ public interface UserDao {
     Integer queryshu(StudentBy studentBy);
 
     List<User> queryList(StudentBy studentBy);
+
+    List<Jve> queryjveshe();
 
 }

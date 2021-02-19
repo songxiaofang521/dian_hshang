@@ -11,4 +11,7 @@ public interface UserService {
     Map queryUser(User user);
 
     Map queryUs(StudentBy studentBy);
+
+    Map queryjveshe();
+
 }
