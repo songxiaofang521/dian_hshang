@@ -3,15 +3,13 @@ package com.example.dian_hshang.service.impl;
 import com.example.dian_hshang.dao.UserDao;
 import com.example.dian_hshang.model.po.Jve;
 import com.example.dian_hshang.model.po.User;
+import com.example.dian_hshang.model.po.Yj;
 import com.example.dian_hshang.model.vo.StudentBy;
 import com.example.dian_hshang.service.UserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class UserServicelmpl implements UserService {
@@ -72,4 +70,24 @@ public class UserServicelmpl implements UserService {
         map.put("message","成功");
         return map;
     }
+
+    @Override
+    public Map queryYj(Integer uid, String rids) {
+        Map map=new HashMap();
+        List<Yj>list=new ArrayList<>();
+       //处理新的角色
+        String [] split=rids.split(",");
+        for (int i = 0; i < split.length; i++) {
+            Yj yj=new Yj();
+            yj.setUid(uid);
+            yj.setRid(Integer.valueOf(split[i]));
+            list.add(yj);
+        }
+        userDao.addYj(list);
+        map.put("code",200);
+        map.put("message","新增成功");
+        return map;
+    }
+
+
 }

@@ -26,4 +26,11 @@
       select * from dian_jve
     </select>
 
+    <insert id="addYj" parameterType="java.util.List">
+        insert into dian_yj (uid,rid) values
+        <foreach collection="list" item="ur" separator=",">
+            (#{ur.uid},#{ur.rid})
+        </foreach>
+    </insert>
+
 </mapper>

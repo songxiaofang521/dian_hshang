@@ -1,6 +1,7 @@
 package com.example.dian_hshang.controller;
 
 import com.example.dian_hshang.model.po.User;
+import com.example.dian_hshang.model.po.Yj;
 import com.example.dian_hshang.model.vo.StudentBy;
 import com.example.dian_hshang.service.UserService;
 import org.springframework.web.bind.annotation.*;
@@ -45,4 +46,11 @@ public class UserController {
         Map map=userService.queryjveshe();
         return map;
     }
+
+    @GetMapping("queryYj")
+    public Map queryYj(Integer uid,String rids){
+        Map map=userService.queryYj(uid,rids);
+        return map;
+    }
+
 }
